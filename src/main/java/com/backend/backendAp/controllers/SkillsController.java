@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/argp")
 @CrossOrigin(origins = "https://portfolio-219c8.web.app")
+//@CrossOrigin(origins = "http://localhost:4200")
 public class SkillsController {
 
     @Autowired

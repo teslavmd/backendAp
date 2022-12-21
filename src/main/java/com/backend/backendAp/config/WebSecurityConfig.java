@@ -40,7 +40,7 @@ public class WebSecurityConfig{
 
 
         http
-                .cors().disable()
+                .cors().and()
                 .authorizeHttpRequests()
                 .antMatchers(HttpMethod.POST,"/api/argp/**").authenticated()
                 .antMatchers(HttpMethod.PUT,"/api/argp/**").authenticated()
