@@ -15,8 +15,6 @@ public class BackendApApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BackendApApplication.class, args);
-
-		System.out.println(new BCryptPasswordEncoder().encode("matias"));
 	}
 
 	@Bean

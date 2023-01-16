@@ -16,8 +16,25 @@ public class AboutMe {
     private Long id;
 
 
+    @Column(name = "nombre", nullable = false)
+    @Getter @Setter
+    private String nombre;
+
+    @Column(name = "apellido", nullable = false)
+    @Getter @Setter
+    private String apellido;
+
+    @Column(name = "edad", nullable = false)
+    @Getter @Setter
+    private int edad;
+
+    @Column(name = "fecha", nullable = false)
+    @Getter @Setter
+    private String fecha;
+
     @Column(name = "texto", nullable = false)
     @Getter @Setter
     private String texto;
+
 
 }
