@@ -15,6 +15,9 @@ public class Projects {
     @Getter @Setter
     private int id;
 
+    @Column(name = "foto")
+    @Getter @Setter
+    private String foto;
 
     @Column(name = "nombre")
     @Getter @Setter

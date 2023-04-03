@@ -46,6 +46,7 @@ public class ProjectsController {
         Projects project = projectsDao.findById(id);
 
         project.setNombre(projectToEdit.getNombre());
+        project.setFoto(projectToEdit.getFoto());
         project.setTecnologias(projectToEdit.getTecnologias());
         project.setDescripcion(projectToEdit.getDescripcion());
         project.setUrl_git(projectToEdit.getUrl_git());
