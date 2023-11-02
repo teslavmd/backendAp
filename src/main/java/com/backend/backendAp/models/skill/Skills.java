@@ -1,10 +1,9 @@
 package com.backend.backendAp.models.skill;
 
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.*;
 
 @Entity
 @Table(name = "skills")
@@ -21,7 +20,8 @@ public class Skills {
 
 
     @Column(name = "img_url", nullable = false) @Getter @Setter
-    private String img_url;
+    @Lob
+    private byte[] img_url;
 
 
     @Column(name = "progreso", nullable = false) @Getter @Setter

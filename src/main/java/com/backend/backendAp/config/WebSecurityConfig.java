@@ -42,11 +42,11 @@ public class WebSecurityConfig{
         http
                 .cors().and()
                 .authorizeHttpRequests()
-                .antMatchers(HttpMethod.POST,"/api/argp/**").authenticated()
-                .antMatchers(HttpMethod.PUT,"/api/argp/**").authenticated()
-                .antMatchers(HttpMethod.DELETE,"/api/argp/**").authenticated()
-                .antMatchers(HttpMethod.GET, "/api/argp/**").permitAll()
-                .antMatchers("/generate-token").permitAll()
+                .requestMatchers(HttpMethod.POST,"/api/argp/**").authenticated()
+                .requestMatchers(HttpMethod.PUT,"/api/argp/**").authenticated()
+                .requestMatchers(HttpMethod.DELETE,"/api/argp/**").authenticated()
+                .requestMatchers(HttpMethod.GET, "/api/argp/**").permitAll()
+                .requestMatchers("/generate-token").permitAll()
                 .anyRequest().authenticated()
                 .and().csrf().disable().addFilter(jwtAuthenticationFilter).addFilterBefore(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);
 

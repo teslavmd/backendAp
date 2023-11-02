@@ -4,7 +4,7 @@ package com.backend.backendAp.models.projects;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "projects")
@@ -17,7 +17,8 @@ public class Projects {
 
     @Column(name = "foto")
     @Getter @Setter
-    private String foto;
+    @Lob
+    private byte[] foto;
 
     @Column(name = "nombre")
     @Getter @Setter
